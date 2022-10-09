@@ -1,0 +1,40 @@
+ *{
+    margin: 0;
+    padding: 0;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+ // (the browser default is 16px and we divided by 1rem(10px) then 10px/16px = 62.5) 
+ // so that makes it alot easer for us to work with rem
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;      //1rem = 10px/16px = 62.5%
+
+    @media only screen and (max-width:  $bp-large) {
+        font-size: 50%;     //1rem = 8px/16px = 50%
+       
+    }
+
+    @media only screen and (max-width:  $bp-medium) {
+        font-size: 31%;     //1rem = 5px/16px = 31%
+        margin: 0;
+    }
+
+}
+
+body {
+    min-height: var(--section-height);
+    background-image: linear-gradient(320deg, rgb(0, 0, 0, .2), rgb(128, 128, 128, .8)),
+    url("../../assets/img/bg-photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-white);
+}
+
+//linear-gradient(320deg, var(--primary-black-color), var(--primary-gray-dark-color)), 

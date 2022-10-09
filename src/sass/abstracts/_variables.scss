@@ -1,0 +1,35 @@
+// $primary-black-color: black;
+// $primary-gray-color: gray;
+// $primary-gray-dark-color: rgb(75, 74, 74);
+
+
+// $color-white: white;
+// $color-black: white;
+// $color-yellow-light: rgb(255, 230, 0);
+// $color-yellow-dark: rgb(167, 150, 0);
+
+// $section-height: 100vh;
+
+:root {
+    --primary-black-color: black;
+    --primary-gray-color: gray;
+    --primary-gray-dark-color: rgb(75, 74, 74);
+
+
+    --color-white: white;
+    --color-black: rgb(0, 0, 0);
+    --color-yellow-light: rgb(255, 230, 0);
+    --color-yellow-dark: rgb(167, 150, 0);
+
+    --section-height: 100vh;
+
+    --shadow-dark: 0 .5rem 1.5rem var(--primary-black-color);
+
+ }
+
+ $bp-largest: 75em; // 1200px/16 
+ $bp-large: 68.75em; // 1100px/16 
+ $bp-medium: 56.25em; // 900px/16 
+ $bp-small: 37.5em; // 900px/16 
+ $bp-smallest: 31.25em; // 500px/16 
+ 

@@ -1,0 +1,116 @@
+.sidebar {
+    background: rgba(255, 255, 255, 0.5);
+    flex: 0 0 18%;
+    margin-right: 2rem;
+    box-shadow: 0.5px 1px 4px 1px  black;
+    animation: sidebar 5s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media only screen and (max-width:  $bp-medium) {
+        margin-right: 0;
+        box-shadow: none;
+    }
+}
+
+.side-nav {
+    
+
+    margin-top: 3rem;
+    list-style-type: none;
+    font-size: 1.5rem;
+
+    &__item{
+        transition: all 4s;
+        position: relative;
+
+        @media only screen and (max-width:  $bp-medium) {
+            flex: 1;
+        }
+    }
+
+    @media only screen and (max-width:  $bp-medium) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @media only screen and (max-width:  $bp-medium) {
+        margin: 0;
+    }
+
+
+    &__item::before {
+        content: "";
+        background: linear-gradient(to right, rgb(1, 119, 155), rgb(207, 0, 0));
+        clip-path: polygon(0% 0%, 100% 0, 90% 50%, 100% 100%, 0% 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        transform: scaleY(0);
+        transition: cubic-bezier(1,0,.0,1) transform .2s, width .4s,
+        background-color .1s;
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 120%;
+
+        @media only screen and (max-width:  $bp-medium) {
+            width: 100%;
+            clip-path: none;
+        }
+
+    }
+
+    &__item:active::before{
+        background: linear-gradient(to right, rgb(8, 137, 177), rgb(221, 11, 11));
+        clip-path: polygon(0% 0%, 100% 0, 90% 50%, 100% 100%, 0% 100%);
+    }
+
+
+    &__link:link,
+    &__link:visited{
+        text-decoration: none;
+        color: var(--color-white);
+        text-transform: uppercase;
+
+        display: block;
+        padding: 1.5rem 1rem;
+        position: relative;
+        z-index: 10;
+
+        display: flex;
+        align-self: center;
+
+        
+    @media only screen and (max-width:  $bp-medium) {
+        justify-content: center;
+    }   
+
+    }
+
+    &__icon{
+        margin-right: 1rem;
+        fill: currentColor;
+        height: 2rem;
+        width: 2rem;
+        color: rgb(255, 255, 255);
+    }
+}
+
+.legal {
+    color: var(--color-black);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem;
+
+    @media only screen and (max-width:  $bp-medium) {
+        display: none;
+    }
+
+}

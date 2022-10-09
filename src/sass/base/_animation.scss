@@ -1,0 +1,84 @@
+@keyframes growRightToLeft{
+    0%{
+        flex: 0 0 0;
+        opacity: 0;
+    }
+
+    100%{
+        flex: 0 0 35rem;
+        opacity: 1;
+        width: 25.2%;
+    }
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+
+  @keyframes header {
+    0% {
+      margin: 0;
+      box-shadow: none;
+    }
+    100% {
+        box-shadow: 0 3px 4px black;
+        margin-bottom: 2rem;
+    }
+  }
+
+  @keyframes sidebar {
+    0% {
+      margin: 0;
+      box-shadow: none;
+    }
+    100% {
+        margin-right: 2rem;
+        box-shadow: 0.5px 1px 4px 1px  black;
+    }
+  }
+
+  @keyframes home {
+    0% {
+      margin: 0;
+      box-shadow: none;
+    }
+    100% {
+        box-shadow: -0.5px 1px 4px 1px  black;
+    }
+  }
+
+  @keyframes LeftToRight {
+    0% {
+      flex: 0 0 0;
+      opacity: 0;
+      width: 0%;
+    }
+    100% {
+        opacity: 1;
+        flex: 0 0 35rem; 
+        width: 100%;
+
+    }
+  }
+
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+      box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 1rem 6rem rgba(255, 39, 75, 0.25);
+      }
+
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+  }

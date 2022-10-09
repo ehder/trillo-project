@@ -1,0 +1,103 @@
+.btn {
+    font-size: inherit;
+    padding: 1rem .5rem;
+    outline: none;
+    border: none;
+    margin: 0rem .5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-inline {
+    transition: all .5s;
+    border-bottom: 1px solid currentColor;
+
+    & span {
+        margin-left: 3px;
+        transition: all .2s;
+    }
+
+    &:hover {
+        color: rgb(37, 25, 25);
+        span {
+            margin-left: 8px;
+        }
+    }
+
+    &:focus {
+        outline: none ;
+        animation: pulsate 1s infinite;
+        border: none;
+    }
+
+
+}
+
+.btn-transparent {
+    background: transparent;
+}
+
+.btn-white {
+    background: white;
+}
+
+.btn-animation {
+    animation: pulsate 2s infinite;
+    border: none;
+}
+
+.btnbook {
+     font-size: 1.5rem;
+     font-weight: 300;
+     text-transform: uppercase;
+     border: none;
+     border-radius: 100px;
+     color: white;
+     background: linear-gradient(to right,red, rgb(8, 19, 22));
+     box-shadow: 0 .5rem 4rem rgb(54, 54, 54, .8);
+     transform: translateY(-3px);
+     position: relative;
+     overflow: hidden;
+     cursor: pointer;
+    
+     & > * {
+        transition: all .4s;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+     }
+
+    &:hover {
+        background: linear-gradient(to left,red, rgb(8, 19, 22));
+    }
+
+    &:hover &__visible{
+        transform: translateY(5rem);
+    }
+
+    &:hover &__invisible{
+        top: 0;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate .7s infinite;
+    }
+
+     &__visible {
+        display: inline-block;
+        padding: 2rem 7.5rem;
+        
+     }
+
+     &__invisible  {
+        position: absolute;
+        left: 0;
+        top: -100%;
+        padding: 2rem 0;
+        
+    }
+
+
+}
+
